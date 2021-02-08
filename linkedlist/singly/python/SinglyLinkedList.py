@@ -86,6 +86,29 @@ class SinglyLinkedList:
         # Increment size
         self.size += 1
 
+    def addLastConstantTime(self, element: Any) -> None:
+        """Add a Node object storing `element` to the end of the SinglyLinkedList instance in constant time.
+
+        Parameters
+        ----------
+        element: Any
+            data to be stored in Node object.
+        """
+        # Create new node to store element.
+        newNode = Node(element)
+
+        # If tail pointer and head pointers have not been set.
+        # Else set the current tail next pointer to the new node and set new node as tail.
+        if self.tail is None:
+            self.tail = newNode
+            self.head = self.tail
+        else:
+            self.tail.next = newNode
+            self.tail = newNode
+        
+        # increase size of SLL
+        self.size += 1
+
     def addAtPosition(self, position, element):
         """
         The `addAtPosition` method adds a new node to the specified position in the linkedlist if the position is valid.
