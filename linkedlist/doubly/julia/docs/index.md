@@ -1,0 +1,11 @@
+```@docs
+DoublyLinkedList
+Node{T}
+LinkedList{T}
+addAtPosition!
+addFirst!
+addLast!
+removeAtPosition!
+removeFirst!
+removeLast!
+```
